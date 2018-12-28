@@ -100,8 +100,10 @@ class Relation(Drawable):
             raise ValueError('Cardinality should be in {}"'.format(self.cardinalities.keys()))
         self.right_col = right_col
         self.left_col = left_col
-        self.right_cardinality = right_cardinality
-        self.left_cardinality = left_cardinality
+        #self.right_cardinality = right_cardinality
+        #self.left_cardinality = left_cardinality
+        self.right_cardinality = left_cardinality
+        self.left_cardinality = right_cardinality
 
     def to_markdown(self):
         return "{} {}--{} {}".format(
